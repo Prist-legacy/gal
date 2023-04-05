@@ -45,10 +45,8 @@ def send_welcome(message):
         user_id = message.from_user.id
         join_date = message.date
         user_info = f"{message.from_user.first_name} {message.from_user.last_name}"
-        if user_id not in key(user_id):
-        	insert_user_data(user_id, join_date, user_info)
-        else:
-        	bot.send_message(message.chat.id, 'help msg')
+        insert_user_data(user_id, join_date, user_info)
+        bot.send_message(message.chat.id, 'help msg')
 
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
@@ -59,4 +57,4 @@ def send_welcome(message):
     else:
         bot.send_message(message.chat.id, 'help msg')
 
-bot.infinity_polling()
+bot.polling()
