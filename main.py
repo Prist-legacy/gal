@@ -3,7 +3,7 @@ import psycopg2
 from telebot.types import*
 from telebot.apihelper import ApiTelegramException
 
-bot = telebot.TeleBot("5628656737:AAGqz06KVUBcdqNbCxQg3-t5nVMg7xy2_so")
+bot = telebot.TeleBot("")
 
 CHAT_ID = '@pristbank' #replace your channel id
 DATABASE_URL = "postgresql://postgres:0XSbBvU64j4G7EWusxWD@containers-us-west-163.railway.app:7257/railway"
