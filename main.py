@@ -45,10 +45,10 @@ def send_welcome(message):
         
         user_id = message.from_user.id
         join_date = message.date
-        use = insert_user_data(user_id, join_date, user_info)
+        
         user_info = f"{message.from_user.first_name} {message.from_user.last_name}"
-        if user_id not in db.users:
-            insert_user_data(user_id, join_date, user_info)
+        if user_id in users.keys():
+            print(user_id)
             bot.send_message(message.chat.id, 'User information has been stored in the database.')
         else:
             bot.send_message(message.chat.id, 'hi prist')
