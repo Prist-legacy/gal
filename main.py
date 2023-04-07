@@ -46,7 +46,7 @@ def send_welcome(message):
         join_date = message.date
         user_info = f"{message.from_user.first_name} {message.from_user.last_name}"
         
-        bot.send_message(message.chat.id, 'help msg')
+        bot.send_message(message.chat.id, 'User information has been stored in the database.')
 
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
